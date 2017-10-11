@@ -10,7 +10,7 @@
         "spec": ">=5.0.0 <6.0.0",
         "type": "range"
       },
-      "/Users/michaelthomas/development/verify/idp-app"
+      "/Users/matt/Projects/HIPPO/verify-app"
     ]
   ],
   "_from": "govuk_frontend_toolkit@>=5.0.0 <6.0.0",
@@ -45,7 +45,7 @@
   "_shasum": "f5f6c5ae48e431ecb97d8b808b1e8db7782abc7f",
   "_shrinkwrap": null,
   "_spec": "govuk_frontend_toolkit@^5.0.0",
-  "_where": "/Users/michaelthomas/development/verify/idp-app",
+  "_where": "/Users/matt/Projects/HIPPO/verify-app",
   "author": {
     "name": "Government Digital Service developers",
     "email": "govuk-dev@digital.cabinet-office.gov.uk"
