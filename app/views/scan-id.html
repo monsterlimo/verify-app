@@ -5,7 +5,45 @@
 {% block content %}
 <main id="scan-item" class="scan-id" role="main">
 
-	<a href="scan-id-review"></a>
+	<img src="/public/images/logos/{{idpSlug}}.png" alt="" style="margin: 10px auto">
+	<h1 class="heading-large">{{idpName}}<br/>GOV.UK Verify</h1>
+
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+
+
+			<div class="inner-block">
+
+				<form>
+
+					<label for="id-document" class="camera-button">Take a photo of your ID
+					<input type="file" id="id-document" accept="image/*" capture="camera" >
+					</label>
+
+					<img id="blah" src="#" alt="your image" style="width:90%;height:auto;"/>
+
+					<label for="id-selfie" class="camera-button">Take a video of yourself scratching your nose
+					<input type="file" id="id-selfie" accept="video/*" capture="camera">
+					</label>
+
+
+					<div class="form-group">
+						<!--<a href="intro-upload" class="button">Start now</a>-->
+					</div>
+
+				</form>
+
+				<!--<a href="scan-id-review"></a>-->
+
+			</div>
+
+
+		</div>
+
+	</div>
 
 </main>
 {% endblock %}
