@@ -15,10 +15,10 @@ if (userInfo){
  userInfo = require(__dirname+"/lib/user.json");
 }
 
-var NotifyClient = require('notifications-node-client').NotifyClient;
+//var NotifyClient = require('notifications-node-client').NotifyClient;
 
-console.log(process.env.NOTIFYAPIKEY);
-notifyClient = new NotifyClient(process.env.NOTIFYAPIKEY);
+//console.log(process.env.NOTIFYAPIKEY);
+//notifyClient = new NotifyClient(process.env.NOTIFYAPIKEY);
 
 console.log("Verify root: " + verifyRoot);
 
@@ -256,13 +256,13 @@ module.exports = {
 
 
     // SENDING DATA FOR NOTIFY 
-    app.post('/:idp/security-code', function(req, res){
+    //app.post('/:idp/security-code', function(req, res){
 
-      notifyClient.sendSms("5c179906-df50-44c9-b42e-f71de4c26b50", req.body.mobileNumber);
-      res.redirect('/' + req.params.idp + '/security-code-2?' + queryString.stringify(req.body));
+      //notifyClient.sendSms("5c179906-df50-44c9-b42e-f71de4c26b50", req.body.mobileNumber);
+      //res.redirect('/' + req.params.idp + '/security-code-2?' + queryString.stringify(req.body));
     // }
 
-    });
+    //});
 
 
     // Sending data to page
