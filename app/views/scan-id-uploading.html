@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Index{% endblock %}
+
+{% block content %}
+<meta http-equiv="refresh" content="5;url=scan-upload-success">
+<main id="content" role="main">
+
+
+	<h1 class="heading-large">Your document is being uploaded</h1>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			
+
+				<div class="inner-block">
+				
+					<p style="text-align: center;">Please wait until the upload process is complete</p>
+		      
+		      <div class="fullwidth-loading" style="text-align:center;">
+		        <img src="/public/images/ajax-loader.gif" alt="loading animation" title="" style="opacity: 0.5;" class="ajaxLoader"/>
+		      </div>
+
+				</div>
+
+
+		</div>
+
+	</div>	
+
+</main>
+{% endblock %}
+
+

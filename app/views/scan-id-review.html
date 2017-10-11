@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Index{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+
+
+	<h1 class="heading-large">Review your photo</h1>
+
+	<div class="grid-row">
+
+		<div class="column-two-thirds">
+
+			
+
+				<div class="inner-block">
+				
+					<p>Please check if:</p>
+
+					<ul class="list list-bullet">
+						<li>The photo is clear</li>
+						<li>There are no reflections</li>
+						<li>All details are visible</li>
+					</ul>
+	
+						<img src="/public/images/photo-id.png"  style="width: 100%;" alt="">
+					
+					<div class="form-group">
+						<a href="scan-id-uploading" class="button">Confirm</a>
+						<a href="scan-id" class="button">Retake</a>
+					</div>
+
+				</div>
+
+
+		</div>
+
+	</div>	
+
+</main>
+{% endblock %}
+
+

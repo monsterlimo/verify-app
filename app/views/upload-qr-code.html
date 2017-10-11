@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Identity test{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+  <h1 class="heading-large">QR Code</h1>
+
+  <div class="grid-row">
+    {% include "includes/support.html" %}
+    <div class="column-two-thirds">
+
+      <form action="{{baseURL}}/upload-pending">
+        {{ formData|safe }}
+
+        <p>Please launch the {{idpName}} app and scan the QR code below when prompted.</p>
+        <p>
+          <img src="/public/images/qr-code.png" alt="">
+        </p>
+        <button class="button">Continue</button>
+        <div class="save-and-return-button">
+          <!-- or <a href="{{verifyRoot}}/save-and-continue{{formQuery}}">save and complete later</a> -->
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+
+

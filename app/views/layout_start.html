@@ -1,0 +1,35 @@
+
+{% extends "unbranded.html" %}
+
+{% block head %}
+
+  <link href='https://fonts.googleapis.com/css?family=Dosis:400,700' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400" rel="stylesheet">
+  <link rel="stylesheet" href="/public/stylesheets/application.css">
+
+{% endblock %}
+
+{% block afterHeader %}
+<header role="banner" id="header">
+
+</header>
+
+
+
+{% endblock %}
+
+{% block bodyEnd %}
+
+  {% include "includes/scripts.html" %}
+
+  {% block pageScripts %}
+  <!-- Questions validation -->
+    
+    {% if validation == 'true' %}
+      <script  src="/public/javascripts/answer-all-questions.js"></script>
+    {% endif %}
+
+  {% endblock %}
+
+{% endblock %}
+

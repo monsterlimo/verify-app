@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Identity test{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+  <h1 class="heading-large">Upload recieved</h1>
+
+  <div class="grid-row">
+    {% include "includes/support.html" %}
+    <div class="column-two-thirds">
+
+      <form action="{{baseURL}}/upload-pending">
+        {{ formData|safe }}
+
+        <p>We have recieved the upload of your driving licence. We will send an email to {{username}} once we have processed your document, this may take up to 2 days.</p>
+
+        <p>Once you have recieved this message, follow the instructions to complete your verification.</p>
+
+        <p>Alternatively you can choose an alternative supplier when presented in GOV.UK Verify</p>
+        
+        <a class="save-and-return-button button" href="{{baseURL}}/upload-confirmation-link{{formQuery}}">save and complete later</a>
+        
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+
+

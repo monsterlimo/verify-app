@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Index{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+
+
+	<h1 class="heading-large">You need to give more evidence</h1>
+
+	<div class="grid-row">
+
+		{% include "includes/support.html" %}
+
+		<div class="column-two-thirds">
+
+	
+			
+			<p>For this government service, we need more evidence to make sure someone isn't pretending to be you. </p>
+
+			<div class="panel panel-border-wide">
+				<p>You add more evidence by entering identity document details and answering questions only you should know the answer to.</p>
+
+				<p>You won’t need to do this every time you access a government service. </p>
+			</div>
+			
+			<p>Once we've checked the evidence and we know that it's you, you can access all government services wherever you see the GOV.UK Verify logo.</p>
+
+			 <p><img class="sign-in-logo" src="/public/images/govuk-verify-small-black-text.png" style="max-height:50px;" alt=""></p>
+
+
+			<a href="{{baseURL}}/uplift-details-playback{{formQuery}}" class="button">
+        Continue
+      </a> 
+
+			<div class="save-and-return-button">
+         <!-- or <a href="{{verifyRoot}}/save-and-continue{{formQuery}}">save and complete later</a> --> 
+      </div>
+
+
+		</div>
+
+	</div>
+
+
+
+</main>
+{% endblock %}
+
+

@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Index{% endblock %}
+
+{% block content %}
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+
+
+	<h1 class="heading-large">Your details</h1>
+
+	<div class="grid-row">
+
+		{% include "includes/support.html" %}
+
+		<div class="column-two-thirds">
+
+			<p>If any of your personal details have changed since we verified your identity, you must update them.</p>
+			<dl class="user-details">
+				<dt>Name</dt>
+				<dd>{{userInfo.firstName}} {{userInfo.middleName}} {{userInfo.lastName}}</dd>
+			</dl>
+
+			<dl class="user-details">
+				<dt>Date of birth</dt>
+				<dd>{{userInfo.dob}}</dd>
+			</dl>
+
+
+			<dl class="user-details">
+				<dt>Address</dt>
+				<dd>
+					<ul>
+						<li>{{userInfo.address1}}</li>
+						<li>{{userInfo.address2}}</li>
+						<li>{{userInfo.town}}</li>
+						<li>{{userInfo.postcode}}</li>
+					</ul>
+				</dd>
+			</dl>
+			
+			<p><a href="#">Update details</a></p>
+			<a href="{{baseURL}}/upload-select-app-link{{formQuery}}&passport=true&driving_licence=true" class="button">
+        Continue
+      </a>
+			<div class="save-and-return-button">
+         <!-- or <a href="{{verifyRoot}}/save-and-continue{{formQuery}}">save and complete later</a> --> 
+      </div>
+
+
+		</div>
+
+	</div>
+
+
+
+</main>
+{% endblock %}
+
+

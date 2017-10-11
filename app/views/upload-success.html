@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Identity test{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+  <h1 class="heading-large">Driving Licence upload successful</h1>
+
+  <div class="grid-row">
+    {% include "includes/support.html" %}
+    <div class="column-two-thirds">
+
+      <form action="{{baseURL}}/upload-pending">
+        {{ formData|safe }}
+
+        <p>Your driving licence has passed our checks.</p>
+
+        <p>You may now continue to the next stage.</p>
+        
+        <a class="save-and-return-button button" href="{{baseURL}}/card-transaction{{formQuery}}">Continue</a>
+        
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+
+

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Identity test{% endblock %}
+
+{% block content %}
+
+<main id="content" role="main">
+	{% include "includes/certified-logo.html" %}
+  <h1 class="heading-large">Upload a picture of your driving licence</h1>
+
+  <div class="grid-row">
+    {% include "includes/support.html" %}
+    <div class="column-two-thirds">
+
+      <form action="{{baseURL}}/upload-send-link">
+        {{ formData|safe }}
+
+       <p>You will need to upload an image of your Driving licence using our free app.</p>
+
+        <div class="form-group set-wide-block-labels">
+          <fieldset>
+            <legend class="form-label-bold">
+            How would you like to recieve a link to download our app?
+            </legend>
+         
+            <label class="block-label" for="radio-1">
+              <input id="radio-1" type="radio" name="linkMethod" value="text">
+              Send me a text message
+            </label>
+            <label class="block-label" for="radio-2">
+              <input id="radio-2" type="radio" name="linkMethod" value="email">
+              Send me an email
+            </label>
+            <label class="block-label" for="radio-3">
+              <input id="radio-3" type="radio" name="linkMethod" value="alreadyHave">
+              I already have the app
+            </label>
+            <label class="block-label" for="radio-4">
+              <input id="radio-4" type="radio" name="linkMethod" value="dontHave">
+              I don't have a driving licence
+            </label>
+          </fieldset>
+        </div>
+
+        <button class="button">Continue</button>
+        <div class="save-and-return-button">
+          or <a href="{{verifyRoot}}/save-and-continue{{formQuery}}">save and complete later</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</main>
+
+
+{% endblock %}
+
+
