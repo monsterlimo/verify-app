@@ -6,7 +6,7 @@
 <main id="content" role="main">
 
 
-	<h1 class="heading-large">Review your ID and Photo</h1>
+	<h1 class="heading-large">Review your photo</h1>
 
 	<div class="grid-row">
 
@@ -23,9 +23,8 @@
 						<li>There are no reflections</li>
 						<li>All details are visible</li>
 					</ul>
-						<img src="" id="id-review" />
-						<img src="" id="photo-review" />
-						<!-- <img src="/public/images/photo-id.png"  style="width: 100%;" alt=""> -->
+	
+						<img src="/public/images/photo-id.png"  style="width: 100%;" alt="">
 					
 					<div class="form-group">
 						<a href="scan-id-uploading" class="button">Confirm</a>
@@ -38,13 +37,6 @@
 		</div>
 
 	</div>	
-	<script>
-	//$(document).ready(function(){
-		var dataImage = localStorage.getItem('imgData');
-		bannerImg = document.getElementById('tableBanner');
-		bannerImg.src = "data:image/png;base64," + dataImage;
-	//})
-	</script>
 
 </main>
 {% endblock %}

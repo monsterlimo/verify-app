@@ -1,74 +1,43 @@
-{% extends "layout.html" %}
+{% extends "layout_start.html" %}
 
 {% block pageTitle %}Index{% endblock %}
 
 {% block content %}
+<main id="scan-item" class="scan-id" role="main">
 
-<main id="content" class="scan-id" role="main">
+	<img src="/public/images/logos/{{idpSlug}}.png" alt="" style="margin: 10px auto">
+	<h1 class="heading-large">{{idpName}}<br/>GOV.UK Verify</h1>
 
-	<!-- <img src="/public/images/logos/{{idpSlug}}.png" alt="" style="margin: 10px auto"> 
-	<h1 class="heading-large">{{idpName}}<br/>GOV.UK Verify</h1>-->
 
 	<div class="grid-row">
+
 		<div class="column-two-thirds">
+
+
+
 			<div class="inner-block">
-				
-					<div id="scan-id-1">
-						<form>
-						<div class="form-group">
-                    		<label for="id-document" class="camera-button">Take a photo of your ID
-							<input type="file" id="id-document" accept="image/*" capture="camera" >
-							</label>
-						</div>
 
-						<div class="form-group">
-							<label>Preview</label>
-							<img id="uploaded-id" src="#" alt="your image" style="width:90%;height:auto;"/>
-						</div>
+				<form>
 
-						<div class="form-group">
-							<a id="scan-id-button" href="#" class="button" disabled="disabled">Continue</a>
-						</div>
-						</form>
+					<label for="id-document" class="camera-button">Take a photo of your ID
+					<input type="file" id="id-document" accept="image/*" capture="camera" >
+					</label>
+
+					<img id="blah" src="#" alt="your image" style="width:90%;height:auto;"/>
+
+					<label for="id-selfie" class="camera-button">Take a video of yourself scratching your nose
+					<input type="file" id="id-selfie" accept="video/*" capture="camera">
+					</label>
+
+
+					<div class="form-group">
+						<!--<a href="intro-upload" class="button">Start now</a>-->
 					</div>
 
-					<div id="scan-id-2">
-						<form>
-							<div class="form-group">
-								<label for="photo-document" class="camera-button">Take a photo of your yourself
-								<input type="file" id="photo-document" accept="image/*" capture="camera" >
-								</label>
-							</div>
-							
-							<div class="form-group">
-								<label>Preview</label>
-								<img id="uploaded-photo" src="#" alt="your image" style="width:90%;height:auto;"/>
-							</div>
-	
-							<div class="form-group">
-								<a id="scan-photo-button" href="#" class="button" disabled="disabled">Continue</a>
-							</div>
-						</form>
-					</div>
+				</form>
 
-						<div id="scan-id-3">
-								<p>Please check if:</p>
-								
-													<ul class="list list-bullet">
-														<li>The photo is clear</li>
-														<li>There are no reflections</li>
-														<li>All details are visible</li>
-													</ul>
-													
-													<img id="id-review" src="#" alt="your image" style="width:90%;height:auto;" />
-													<img id="photo-review" src="#" alt="your image" style="width:90%;height:auto;" />
-														<!-- <img src="/public/images/photo-id.png"  style="width: 100%;" alt=""> -->
-													
-													<div class="form-group">
-														<a href="scan-id-uploading" class="button">Confirm</a>
-														<a href="scan-id" class="button">Retake</a>
-													</div>
-							</div>
+				<!--<a href="scan-id-review"></a>-->
+
 			</div>
 
 
@@ -77,9 +46,6 @@
 	</div>
 
 </main>
-
-
-
 {% endblock %}
 
 
