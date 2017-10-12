@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}Index{% endblock %}
+
+{% block content %}
+
+<main id="content" class="scan-id" role="main">
+
+	<!-- <img src="/public/images/logos/{{idpSlug}}.png" alt="" style="margin: 10px auto"> 
+	<h1 class="heading-large">{{idpName}}<br/>GOV.UK Verify</h1>-->
+
+	<div class="grid-row">
+		<div class="column-two-thirds">
+			<div class="inner-block">
+				<form>
+					<div class="form-group">
+                    	<label for="id-document" class="camera-button">Take a photo of yourself
+						<input type="file" id="id-document" accept="image/*" capture="camera" >
+						</label>
+					</div>
+					
+					<div class="form-group">
+						<label>Preview</label>
+						<img id="blah" src="#" alt="your image" style="width:90%;height:auto;"/>
+					</div>
+		<!--
+					<div class="form-group">
+						<label for="id-selfie" class="camera-button">Take a video of yourself scratching your nose
+						<input type="file" id="id-selfie" accept="video/*" capture="camera">
+						</label>
+					</div>
+				-->
+					<div class="form-group">
+						<a id="scan-id-button" href="scan-id-review" class="button" disabled="disabled">Continue</a>
+					</div>
+
+				</form>
+
+				<!--<a href="scan-id-review"></a>-->
+
+			</div>
+
+
+		</div>
+
+	</div>
+
+</main>
+
+<script>
+	
+document.getElementById("blah").addEventListener("DOMAttrModified", function(e) {
+	//e.preventDefault;
+	console.log("image updated");
+	console.log(e);
+});
+//console.log(idImage);
+//idImage.addEventListener("change", function(e) {
+//	if(event.attrName == "src") {
+//console.log(event)
+	
+	//console.log();
+//});
+//console.log(idImage);
+</script>
+
+{% endblock %}
+
+

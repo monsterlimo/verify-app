@@ -103,28 +103,62 @@ function showHideRadioToggledContent() {
 
 }
 
-function readURL(input) {
+function readURL(input, idType) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      $('#blah').attr('src', e.target.result);
+      if (idType == "photo") {
+        $('#uploaded-photo').attr('src', e.target.result);
+        $('#photo-review').attr('src', e.target.result);
+      }
+      if (idType == "id") {
+        $('#uploaded-id').attr('src', e.target.result);
+        $('#id-review').attr('src', e.target.result);
+      }
     }
 
     reader.readAsDataURL(input.files[0]);
+
   }
 }
 
-$("#id-document").change(function(){
-  readURL(this);
-  $('#blah').style.display = 'block';
+$("#photo-document").change(function(){
+  readURL(this, "photo");
+  //$('#blah').style.display = 'block';
+  $("#scan-photo-button").removeAttr("disabled");
 });
 
+$("#id-document").change(function(){
+  readURL(this, "id");
+  //$('#blah').style.display = 'block';
+  $("#scan-id-button").removeAttr("disabled");
+});
+
+$("#scan-id-button").on("click", function(e) {
+  e.preventDefault();
+  if ($("#scan-id-button").attr("disabled") == "disabled") {
+    
+  }
+  $("#scan-id-1").css("display","none");
+  $("#scan-id-2").css("display","block");
+});
+
+$("#scan-photo-button").on("click", function(e) {
+  e.preventDefault();
+  if ($("#scan-photo-button").attr("disabled") == "disabled") {
+    
+  }
+  $("#scan-id-2").css("display","none");
+  $("#scan-id-3").css("display","block");
+});
 
 $(document).ready(function() {
 
   showHideCheckboxToggledContent();
   showHideRadioToggledContent();
+
+var globalImages;
 
   $( "#choose-proof-of-identity" ).submit(function( ) {
     var radioValue = $('input[name=radioName]:checked').val();
