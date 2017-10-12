@@ -108,9 +108,9 @@ function readURL(input, idType) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      var testing = document.createElement("p");
-      testing.text = "UPLOADED AN IMAGE";
-      document.getElementById("uploaded-id").appendChild(testing);
+      //var testing = document.createElement("p");
+      //testing.text = "UPLOADED AN IMAGE";
+      //document.getElementById("uploaded-id").appendChild(testing);
 
 
       if (idType == "photo") {
@@ -130,13 +130,13 @@ function readURL(input, idType) {
 
 $("#photo-document").change(function(){
   readURL(this, "photo");
-  //$('#blah').style.display = 'block';
+  $('#uploaded-photo').style.display = 'block';
   $("#scan-photo-button").removeAttr("disabled");
 });
 
 $("#id-document").change(function(){
   readURL(this, "id");
-  //$('#blah').style.display = 'block';
+  $('#uploaded-id').style.display = 'block';
   $("#scan-id-button").removeAttr("disabled");
 });
 
