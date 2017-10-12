@@ -103,30 +103,20 @@ function showHideRadioToggledContent() {
 
 }
 
-function readId(input) {
+function readURL(input, idType) {
   if (input.files && input.files[0]) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-
-    
-        $('#uploaded-id').attr('src', e.target.result);
-        $('#id-review').attr('src', e.target.result);
-    
-    }
-
-    reader.readAsDataURL(input.files[0]);
-
-  }
-}
-
-function readPhoto(input) {
-  if (input.files && input.files[0]) {
-    var reader = new FileReader();
-
-    reader.onload = function (e) {
+      
+      if (idType == "photo") {
         $('#uploaded-photo').attr('src', e.target.result);
         $('#photo-review').attr('src', e.target.result);
+      }
+      if (idType == "id") {
+        $('#uploaded-id').attr('src', e.target.result);
+        $('#id-review').attr('src', e.target.result);
+      }
     }
 
     reader.readAsDataURL(input.files[0]);
@@ -135,14 +125,14 @@ function readPhoto(input) {
 }
 
 $("#photo-document").change(function(){
-  readPhoto(this);
-  $('#uploaded-photo').css("display","block");
+  readURL(this, "photo");
+  //$('#blah').style.display = 'block';
   $("#scan-photo-button").removeAttr("disabled");
 });
 
 $("#id-document").change(function(){
-  readId(this);
-  $('#uploaded-id').css("display","block");
+  readURL(this, "id");
+  //$('#blah').style.display = 'block';
   $("#scan-id-button").removeAttr("disabled");
 });
 
