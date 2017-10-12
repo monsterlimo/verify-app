@@ -108,6 +108,11 @@ function readURL(input, idType) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
+      var testing = document.createElement("p");
+      testing.text = "UPLOADED AN IMAGE";
+      document.getElementById("uploaded-id").appendChild(testing);
+
+
       if (idType == "photo") {
         $('#uploaded-photo').attr('src', e.target.result);
         $('#photo-review').attr('src', e.target.result);
