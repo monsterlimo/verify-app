@@ -136,13 +136,13 @@ function readPhoto(input) {
 
 $("#photo-document").change(function(){
   readPhoto(this);
-  $('#uploaded-photo').style.display = 'block';
+  $('#uploaded-photo').css("display","block");
   $("#scan-photo-button").removeAttr("disabled");
 });
 
 $("#id-document").change(function(){
   readId(this);
-  $('#uploaded-id').style.display = 'block';
+  $('#uploaded-id').css("display","block");
   $("#scan-id-button").removeAttr("disabled");
 });
 
