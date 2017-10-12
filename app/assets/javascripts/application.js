@@ -108,7 +108,19 @@ function readURL(input) {
     var reader = new FileReader();
 
     reader.onload = function (e) {
-      $('#blah').attr('src', e.target.result);
+      $('#id-preview').attr('src', e.target.result);
+    }
+
+    reader.readAsDataURL(input.files[0]);
+  }
+}
+
+function readURLPhoto(input) {
+  if (input.files && input.files[0]) {
+    var reader = new FileReader();
+
+    reader.onload = function (e) {
+      $('#photo-preview').attr('src', e.target.result);
     }
 
     reader.readAsDataURL(input.files[0]);
@@ -117,7 +129,12 @@ function readURL(input) {
 
 $("#id-document").change(function(){
   readURL(this);
-  $('#blah').style.display = 'block';
+  $('#id-preview').css("display", "block");
+});
+
+$("#photo-document").change(function(){
+  readURLPhoto(this);
+  $('#photo-preview').css("display", "block");
 });
 
 
